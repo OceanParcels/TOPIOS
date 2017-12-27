@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress SpellCheckingInspection -->
 <html lang="en">
 
 <head>
@@ -24,6 +25,7 @@
 <body>
 
 <!-- Navigation -->
+<!--suppress SpellCheckingInspection -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">TOPIOS</a>
@@ -78,7 +80,7 @@
 <div class="container">
 
   <h1 class="my-4">TOPIOS: Tracking of Plastic In Our Seas</h1>
-  TOPIOS is a 5-year project, funded through a <a href="https://erc.europa.eu/">European Research Council</a> <a href="https://erc.europa.eu/funding/starting-grants">Startig Grant</a> project to <a href="https://www.uu.nl/staff/EvanSebille">Erik van Sebille</a>, to <strong>vastly improve our understanding of the way plastic litter moves through our ocean</strong>.
+  TOPIOS is a 5-year project, funded through a <a href="https://erc.europa.eu/">European Research Council</a> <a href="https://erc.europa.eu/funding/starting-grants">Starting Grant</a> project to <a href="https://www.uu.nl/staff/EvanSebille">Erik van Sebille</a>, to <strong>vastly improve our understanding of the way plastic litter moves through our ocean</strong>.
 
   <hr>
 
@@ -137,7 +139,7 @@
         <div class="card-body">
           <h4 class="card-title">Philippe Delandmeter</h4>
           <h6 class="card-subtitle mb-2 text-muted">Ocean model developer</h6>
-          <p class="card-text">Philippe is a postdoc at <a href="https://www.uu.nl/en/research/institute-for-marine-and-atmospheric-research-imau">IMAU</a>, Utrecht University, Netherlands. His research focusses on improving an optimising the <a href="http://oceanparcels.org/">Parcels code</a> used in TOPIOS to simulate plastic transport in the ocean.
+          <p class="card-text">Philippe is a postdoc at <a href="https://www.uu.nl/en/research/institute-for-marine-and-atmospheric-research-imau">IMAU</a>, Utrecht University, Netherlands. His research focuses on improving an optimising the <a href="http://oceanparcels.org/">Parcels code</a> used in TOPIOS to simulate plastic transport in the ocean.
           </p>
         </div>
         <div class="card-footer">
@@ -197,6 +199,57 @@
       </div>
     </div>
 
+  </div>
+
+  <hr>
+  <div class="row">
+    <div class="col">
+      <h2>Peer-reviewed articles from TOPIOS</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+
+        <div class="mb-4" role="tablist" aria-multiselectable="true">
+        <div class="card">
+          <div class="card-header" role="tab">
+            <h5 class="mb-0">
+              Parcels v0.9: prototyping a Lagrangian Ocean Analysis framework for the petascale age
+            </h5>
+            Lange, M and E van Sebille (2017), <i>Geoscientific Model Development</i>, <i>10</i>, 4175-4186 <br>
+            <a class="collapsed" data-toggle="collapse" href="#LangeVanSebille" aria-expanded="true">[ Expand abstract]</a>
+            <span style="display:inline-block; width:30px"></span>
+            <a href="https://doi.org/10.5194/gmd-10-4175-2017"><i class="fa fa-external-link fa-1x"></i> [ Link to article - Open Access ]</a>
+          </div>
+          <div id="LangeVanSebille" class="collapse" role="tabpanel">
+            <div class="card-body">
+              As ocean general circulation models (OGCMs) move into the petascale age, where the output of single simulations exceeds petabytes of storage space, tools to analyse the output of these models will need to scale up too. Lagrangian ocean analysis, where virtual particles are tracked through hydrodynamic fields, is an increasingly popular way to analyse OGCM output, by mapping pathways and connectivity of biotic and abiotic particulates. However, the current software stack of Lagrangian ocean analysis codes is not dynamic enough to cope with the increasing complexity, scale and need for customization of use-cases. Furthermore, most community codes are developed for stand-alone use, making it a nontrivial task to integrate virtual particles at runtime of the OGCM. Here, we introduce the new Parcels code, which was designed from the ground up to be sufficiently scalable to cope with petascale computing. We highlight its API design that combines flexibility and customization with the ability to optimize for HPC workflows, following the paradigm of domain-specific languages. Parcels is primarily written in Python, utilizing the wide range of tools available in the scientific Python ecosystem, while generating low-level C code and using just-in-time compilation for performance-critical computation. We show a worked-out example of its API, and validate the accuracy of the code against seven idealized test cases. This version 0.9 of Parcels is focused on laying out the API, with future work concentrating on support for curvilinear grids, optimization, efficiency and at-runtime coupling with OGCMs.
+            </div>
+          </div>
+        </div>
+
+        <p></p>
+
+        <div class="card">
+          <div class="card-header" role="tab">
+            <h5 class="mb-0">
+              Prevention through policy: Urban macroplastic leakages to the marine environment during extreme rainfall events
+            </h5>
+            Axelsson, C and E van Sebille (2017), <i>Marine Pollution Bulletin</i>, <i>124</i>, 211-227<br>
+            <a class="collapsed" data-toggle="collapse" href="#AxelssonVanSebille" aria-expanded="true">[ Expand abstract ]</a>
+            <span style="display:inline-block; width:30px"></span>
+            <a href="https://doi.org/10.1016/j.marpolbul.2017.07.024"><i class="fa fa-external-link fa-1x"></i> [ Link to article - Open Access]</a>
+          </div>
+          <div id="AxelssonVanSebille" class="collapse" role="tabpanel">
+            <div class="card-body">
+              The leakage of large plastic litter (macroplastics) into the ocean is a major environmental problem. A significant fraction of this leakage originates from coastal cities, particularly during extreme rainfall events. As coastal cities continue to grow, finding ways to reduce this macroplastic leakage is extremely pertinent. Here, we explore why and how coastal cities can reduce macroplastic leakages during extreme rainfall events. Using nine global cities as a basis, we establish that while cities actively create policies that reduce plastic leakages, more needs to be done. Nonetheless, these policies are economically, socially and environmentally cobeneficial to the city environment. While the lack of political engagement and economic concerns limit these policies, lacking social motivation and engagement is the largest limitation towards implementing policy. We recommend cities to incentivize citizen and municipal engagement with responsible usage of plastics, cleaning the environment and preparing for future extreme rainfall events.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
 </div>
