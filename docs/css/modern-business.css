@@ -35,3 +35,8 @@ body {
   height: 75px;
   visibility: hidden;
 }
+
+.team-photo {
+  max-width:280px;
+  margin: 0 auto;
+}
