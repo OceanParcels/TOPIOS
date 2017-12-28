@@ -28,6 +28,11 @@ body {
   margin-bottom: 30px;
 }
 
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 *[id]:before {
   display: block;
   content: " ";
