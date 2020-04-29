@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--suppress SpellCheckingInspection -->
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TOPIOS: Tracking Of Plastic In Our Seas</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/academicons.css"/>
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111703388-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111703388-1');
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<!--suppress SpellCheckingInspection -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">TOPIOS: Tracking Of Plastic In Our Seas</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <hr>
+
+  <h1 class="display-3" style="text-align: center;">Closing the Mediterranean Floating Plastic Mass Budget</h1>
+	
+	<p>
+	It is currently not well known how much plastics are entering our oceans, and what happens with these plastics in the environment. Most plastics are lighter than water, and are therefore expected to float. However, over time a layer of algae increases the weight of these plastic particles, possibly leading to these particles sinking down. Another significant part of plastics might eventually end up on our coastlines.
+	</p><p>
+	Here, we developed a method to estimate the total input of plastics in the Mediterranean, and where these plastics are expected to end up. The Mediterranean is a nice test case: it is confined, a lot of people are living in this area, which likely means a lot of plastic pollution as well, and there are many plastic concentration measurements available from the surface water.
+    </p><p>
+    A model of floating particles is made to represent floating plastics as accurately as possible, by comparing it with these plastic concentration measurements. Results from the model show that the total plastic input into the Mediterranean sea likely ranges between 2,200-4,000 tonnes for the year 2015, that only a small part of the plastics remain afloat (about 240-390 tonnes), that about half of the plastics start sinking down, and that about half of the plastics are expected to end up on the coastlines.
+    </p><p style="color:#9E9E9E">
+    	<small>author: Mikael Kaandorp, date: May 2020</small>
+    </p>
+    <a href="#abstract_expanded" class="collapsed btn btn-primary" data-toggle="collapse" aria-expanded="true">Read the scientific abstract</a>
+	<a class="collapsed btn btn-primary" href="#results">Go to the results</a>
+	
+  <div id="abstract_expanded" class="collapse" role="tabpanel">
+    <div class="card-body">
+      	<p>
+        Plastics entering the ocean face a fate which is unknown: how quickly will it start sinking down, how much ends up on coastlines? Estimates of plastic inputs are orders of magnitude larger than quantities found in surface waters. To get a better understanding of the fate of these plastics, an inverse modelling methodology is presented here for a Lagrangian ocean model, estimating floating plastic quantities in the Mediterranean. 
+    	</p><p>
+        Field measurements of plastic concentrations in the Mediterranean are used to inform parametrizations of processes affecting the distribution of floating plastics. These parametrizations are implemented in a Lagrangian framework for beaching, sinking, and for various sources of marine plastics. The parameters of the model are found using inverse modelling, by comparison of model results and measurements of floating plastic concentrations. Time scales for the sinks are found, and likely sources of plastics can be ranked in importance. 
+        </p><p>	
+        A new mass balance is made for floating plastics in the Mediterranean: for 2015 there is an estimated input of 2,200-4,000 tonnes, and of plastics released since 2006, about 240-390 tonnes remain afloat in the surface waters, 44-60% ended up on coastlines, and 40-56% have sunk down.
+    	</p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h2 id="simulation">Simulation of floating plastics</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+		<iframe width="820" height="460"
+		src="https://www.youtube.com/embed/k1l5gt9wpso?version=3&loop=1&playlist=k1l5gt9wpso">
+		</iframe> 
+    </div>
+    <div class="col align-self-center">
+      <p class="card-text">
+		Floating plastics are simulated using a Lagrangian model: this means virtual particles, representing plastics, are released in a virtual ocean. 
+      </p><p>
+		The particles are moved around using reanalysis data for the currents [1], and influence of the waves (Stokes drift) [2]. The simulation is run between 2006-2016. 
+    </p>
+    </div>
+  </div>
+
+<hr>
+
+  <h2 id="sources">Where does plastic pollution come from?</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+      <img class="media-object" src="images/mediterranean/sources_4.png" width=100% alt="">
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		The virtual plastics are released at different locations, where we expect a lot of plastic input, see the figure on the left. 
+    </p><p>
+    	The different <strong>sources</strong> taken in account are: river mouths (green circles) [3], fishing activity (blue shading) [4], and densely populated coastal areas (red shading) [5][6]. 
+    </p><p>
+    	It is currently not well known how much each source contributes to the total amount of plastic pollution. We therefore set the importance of the sources as a <strong>parameter</strong> in the model.
+    </p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h2 id="sinks">Where are the floating plastics going?</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+		<iframe width="820" height="460"
+		src="https://www.youtube.com/embed/fqn7rDfHqU0?version=3&loop=1&playlist=fqn7rDfHqU0">
+		</iframe> 
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		Environmental <strong>sinks</strong> of plastics are added to the model. We consider plastics <strong>sinking down</strong> (due to e.g. biofouling [7]), and plastics <strong>ending up on beaches</strong> as the most important sinks.
+    </p><p>
+    	It is currently not well known what is the most important environmental sink. We therefore <strong>parametrize</strong> the sinks to be able to test different scenarios. 
+    </p><p>
+    	With the parametrization for the sinks, we can now calculate the probability that a plastic particle is still afloat. This is displayed in the animation on the left: particles light up in red when they disappear due to beaching. By combining the sinks with the source parametrization, we can calculate the amount of floating plastics at a given <strong>location</strong> at a given <strong>time</strong>. 
+    </p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h2 id="measurements">Does the model represent reality?</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+		<iframe width="820" height="460"
+		src="https://www.youtube.com/embed/SZV0mUEn6zA?version=3&loop=1&playlist=SZV0mUEn6zA">
+		</iframe> 
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		Now that we have a model with possible sources and sinks of floating plastics, it is time to see if the model is representing reality.
+    </p><p>
+    	About a thousand measurements of plastic concentrations were gathered from literature. We can compare our model to these measurements: see the animation on the left.
+    </p><p>
+    	We will try to find out what out parameters for the sources and sinks should be, such that our model is as realistic as possible. This is what we call <strong>inverse modelling</strong>. In this process we try out a lot of parameter combinations, to see what the most likely values are.
+    </p>
+    </div>
+  </div>
+  
+	<hr>
+
+  <h2 id="results">Model results</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+      <img class="media-object" src="images/mediterranean/map_sinking_beaching6.png" width=100% alt="">
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		The importance of the different sources and sinks of floating plastics are found using the inverse modelling process described above.
+    </p><p>
+    	The most important source of plastics in the Mediterranean are likely the densely populated coastal areas: these are estimated to contribute to 66% of the pollution. Rivers are estimated to contribute to 26% of the pollution, fishing activity to 6%.
+    </p><p>
+    	There is a roughly equal amount of plastics ending up on beaches and plastics sinking down. A map of where the plastics are expected to end up is shown on the left.
+    </p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h2 id="conclusion">Conclusion and outlook</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+    <p>
+      	By combining a model of floating particles with measurements of plastic concentrations, we tried to get a better overview of plastic pollution in the Mediterranean sea. This kind of analysis can be used to answer questions like: <strong>what causes most plastic pollution</strong> and <strong>where is plastic pollution a problem</strong>.
+    </p><p>
+    	Future work will focus on making the model more realistic, by taking for example in account how plastic particles fragment into smaller pieces over time. More measurements can be included from beaches and sea sediment as well, and the approach can be extended globally.
+    </p><p>
+    	For more information, you can have a look at our scientific paper [coming soon], or send us an email.
+    </p>
+    </div>
+    </div>
+
+  <hr>
+
+  <h2 id="conclusion" style="color:#9E9E9E">References</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+    <p style="color:#9E9E9E">
+	[1] Simoncelli, S.; Fratianni, C.; Pinardi, N.; Grandi, A.; Drudi, M.; Oddo, P.; Dobricic, S. Mediterranean Sea Physical Reanalysis (CMEMS MED-Physics) [Data set]. 2019.
+    </p>
+    <p style="color:#9E9E9E">
+	[2] Korres, G.; Ravdas, M.; Zacharioudaki, A. Mediterranean Sea Waves Hindcast (CMEMS MED-Waves) [Data set]. 2019.
+    </p>    
+    <p style="color:#9E9E9E">
+	[3] Lebreton, L. C.; Van Der Zwet, J.; Damsteeg, J. W.; Slat, B.; Andrady, A.; Reisser, J. River plastic emissions to the world’s oceans. Nature Communications 2017, 8, 1–10.
+    </p>
+    <p style="color:#9E9E9E">
+	[4] Kroodsma, D. A.; Mayorga, J.; Hochberg, T.; Miller, N. A.; Boerder, K.; Ferretti, F.; Wilson, A.; Bergman, B.; White, T. D.; Block, B. A.; Woods, P.; Sullivan, B.; Costello, C.; Worm, B. Tracking the global footprint of fisheries. Science 2018, 359, 904–908.
+    </p>
+    <p style="color:#9E9E9E">
+	[5] Jambeck, J. R.; Geyer, R.; Wilcox, C.; Siegler, T. R.; Perryman, M.; Andrady, A.; Narayan, R.; Law, K. L. Plastic waste inputs from land into the ocean. Science 2015, 347, 768–771
+    </p>
+    <p style="color:#9E9E9E">
+	[6] SEDAC - Socioeconomic Data and Applications Center, CIESIN - Center for International Earth Science Information Network - Columbia University, FAO - United Nations Food and Agriculture Programme, CIAT - Centro Internacional de Agricultura Tropical. Gridded Population of the World, Version 3 (GPWv3): Population Count Grid [Data set]. 2015.
+    </p>
+    <p style="color:#9E9E9E">
+	[7] Fazey, F. M.; Ryan, P. G. Biofouling on buoyant marine plastics: An experimental study into the effect of size on surface longevity. Environmental Pollution 2016, 210, 354–360.
+    </p>
+    </div>
+    </div>
+  </div>
+  
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      <img class="img-fluid" style="width:200px" src="images/LOGO_ERC-FLAG_EU%20NEGATIF.png" alt=""><br>
+      Copyright &copy; TOPIOS project, 2017<br>
+      <small>Based on the <a href ="https://blackrockdigital.github.io/startbootstrap-modern-business/">Modern Business</a> theme, distributed by <a href="https://startbootstrap.com/template-overviews/modern-business/">Start Bootstrap</a> under an MIT license</small>
+    </p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
