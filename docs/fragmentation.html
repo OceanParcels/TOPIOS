@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!--suppress SpellCheckingInspection -->
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>TOPIOS: Tracking Of Plastic In Our Seas</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/academicons.css"/>
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111703388-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111703388-1');
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<!--suppress SpellCheckingInspection -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">TOPIOS: Tracking Of Plastic In Our Seas</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#introduction">Introduction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sizedist">PSD's</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fragmentation">Fragmentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#environment">Environment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#validation">Validation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sensitivity">Sensitivity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#conclusions">Conclusions</a>
+        </li>      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Page Content -->
+<div class="container">
+
+  <hr>
+
+  <h1 class="display-3" style="text-align: center;">Marine Plastic Fragmentation:</h1>
+  <h2 class="display-4" style="text-align: center;">A Continuous Cascading Fragmentation Model</h2>
+	
+	<p>
+	Plastic fragments make up the majority of oceanic plastic pollution in terms of abundance. How plastics fragment, and how this can be modelled is not yet well understood, however.
+	In this work, we have taken a fragmentation model which has been used before to model how rocks fragment over time <a href="#references">[1]</a>. 
+	This fragmentation model breaks down objects in a cascading fashion: fragments split off from an initial object, and smaller fragments are split off from the newly created fragments repeatedly. 
+	We then calibrate the fragmentation model to data from experimental studies on plastic fragmentation.
+	</p>
+	The fragmentation model is coupled to a simple box model, in which plastic particles can travel between the beach, coastal water, and open ocean. 
+	Fragmentation is assumed to only happen on the beach, and size-dependent transport processes are added to the model, such as vertical mixing in the water column, beaching, and resuspension.
+	The box model is calibrated to represent <a href="mediterranean.html">plastic transport in the Mediterranean Sea</a>.  
+	</p>
+	<p>	
+	We find that the model predicts fragmentation to be a major source of plastic particles in terms of abundance. On the other hand, fragmentation seems to play a minor role in 
+	the mass budget compared to other environmental sinks, by breaking down particles such that they become smaller than typical microplastics (<0.1mm). 
+    </p><p style="color:#9E9E9E">
+    	<small>author: <a href="https://www.uu.nl/medewerkers/MLAKaandorp">Mikael Kaandorp</a>, date: April 2021</small>
+    </p>
+    <a href="#abstract_expanded" class="collapsed btn btn-primary" data-toggle="collapse" aria-expanded="true">Read the scientific abstract</a>
+	<a class="collapsed btn btn-primary" href="#results">Go to the results</a>
+	<a class="collapsed btn btn-primary" href="https://iopscience.iop.org/article/10.1088/1748-9326/abe9ea"  target="_blank">Go to the article in Environmental Research Letters</a>
+	
+  <div id="abstract_expanded" class="collapse" role="tabpanel">
+    <div class="card-body">
+      	<p>
+		Field studies in the global ocean have shown that plastic fragments make up the majority of plastic pollution in terms of abundance. 
+		It is not well understood how quickly plastics in the marine environmental fragment, however. Here, we study the fragmentation process in the 
+		oceanic environment by considering a model which captures continuous fragmentation of particles over time in a cascading fashion. 
+		With this cascading fragmentation model we simulate particle size distributions (PSDs), specifying the abundance or mass of particles for different 
+		size classes. 
+		</p>
+		<p>	
+		The fragmentation model is coupled to an environmental box model, simulating the distributions of plastic particles in the ocean, coastal waters, and on the beach. 
+		We demonstrate the capabilities of the model by calibrating it to estimated plastic transport in the Mediterranean Sea, and compare the modelled PSDs to available observations in this region. 
+		Results are used to illustrate the effect of size-selective processes such as vertical mixing in the water column and resuspension of particles from the beach into coastal waters. 
+		</p>
+		<p>			
+		The model quantifies the role of fragmentation on the marine plastic mass budget: while fragmentation is a major source of secondary plastic particles in terms of abundance, it seems to have a minor effect on the total mass of particles larger than 0.1 mm. 
+		Future comparison to observed PSD data allow us to understand size-selective plastic transport in the environment, and potentially inform us on plastic longevity.     	
+		</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 id="introduction">Introduction: why should we care about plastic fragmentation?</h2>
+  <div class="row">
+    <div class="col-lg-7" style="margin-bottom: 20px">
+      <img class="media-object" src="images/fragmentation/overview.png" width=100% alt="">
+      <img class="media-object" src="images/fragmentation/Fragments_2.jpeg" width=90% alt="">
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+	In the TOPIOS project, we try to get an overview of where all the plastics are in the marine environment. What are the sources of marine plastics, how are they transported, and where do they end up?
+    </p>
+    <p>
+	Majority of pollution in terms of abundance, no real models exist, so hard to quantify its effect on the mass budget
+    </p>
+    </div>
+  </div>
+  
+    
+  <hr>
+
+  <h2 id="sizedist">Particle Size Distributions</h2>
+  <div class="row">
+    <div class="col-lg-7" style="margin-top: 30px;margin-bottom: 20px">
+      <img class="media-object" src="images/fragmentation/Fragments_1.png" width=100% alt="">
+      <img class="media-object" src="images/fragmentation/PSD.png" width=100% alt="">
+    </div>
+    <div class="col align-self-center">
+      <p class="card-text">
+		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+	</p>
+    </div>
+  </div>
+  
+<hr>
+
+  <h2 id="fragmentation">A fragmentation model from outer space</h2>
+  <div class="row">
+    <div class="col-lg-7" style="margin-bottom: 20px">
+      <img src="images/fragmentation/Cubes.png" style="text-align: center" width=80% alt="">
+    	<iframe style="position: relative; height: 400px; width: 100%;"
+		src="https://www.youtube.com/embed/fqn7rDfHqU0?version=3&loop=1&playlist=fqn7rDfHqU0">
+		</iframe> 
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		The virtual plastic particles are released at different locations, where we expect a lot of plastic input, see the figure on the left. 
+    </p><p>
+    	The different <strong>sources</strong> taken in account are: river mouths (green circles) <a href="#references">[3]</a>, fishing activity (blue shading) <a href="#references">[4]</a>, and densely populated coastal areas (red shading) <a href="#references">[5][6]</a>. 
+    </p><p>
+    	It is currently not well known how much each source contributes to the total amount of plastic pollution. We therefore set the importance of the sources as a <strong>parameter</strong> in the model.
+    </p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h2 id="environment">Environmental transport</h2>
+  <div class="row">
+    <div class="col-lg-7" style="margin-bottom: 20px">
+		<img src="images/fragmentation/Box_model.png" style="text-align: center" width=100% alt="">
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		Environmental <strong>sinks</strong> of plastic are added to the model. We consider plastic particles <strong>sinking down</strong> (due to e.g. biofouling <a href="#references">[7]</a>), and plastic particles <strong>ending up on beaches</strong> as the most important sinks.
+    </p><p>
+    	It is currently not well known what is the most important environmental sink. We therefore <strong>parametrize</strong> the sinks to be able to test different scenarios. 
+    </p><p>
+    	With the parametrization for the sinks, we can now calculate the probability that a plastic particle is still afloat. This is displayed in the animation on the left: particles light up in red when they disappear due to beaching. By combining the sinks with the source parametrization, we can calculate the amount of floating plastic particles at a given <strong>location</strong> at a given <strong>time</strong>. 
+    </p>
+    </div>
+  </div>
+  
+  <hr>
+
+  <h2 id="validation">Does the model do a good job?</h2>
+  <div class="row">
+    <div class="col-lg-8" style="margin-bottom: 20px">
+		<img src="images/fragmentation/Calibration.png" style="text-align: center" width=100% alt="">
+		<img src="images/fragmentation/Validation.png" style="text-align: center" width=80% alt="">
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		Now that we have a model with possible sources and sinks of floating plastic particles, it is time to start comparing our model with in situ measurements of plastic concentrations.
+    </p><p>
+    	About a thousand measurements of plastic concentrations were gathered from literature. By using a neuston net, researchers have measured the plastic concentration at different locations and times in the Mediterranean: see the animation on the left.
+    </p><p>
+    	We will try to find out what the parameters for the sources and sinks should be, such that our model matches these observations as well as possible. This is what we call <strong>inverse modelling</strong>. In this process we try out a lot of parameter combinations, to see what the most likely values are.
+    </p>
+    </div>
+  </div>
+  
+	<hr>
+
+  <h2 id="sensitivity">Sensitivity study: environmental (size-dependent) transport and fragmentation</h2>
+  <div class="row">
+    <div class="col-lg-5" style="margin-bottom: 20px">
+		<img src="images/fragmentation/Sensitivity.png" style="text-align: center" width=100% alt="">
+    </div>
+    <div class="col align-self-center">
+    <p class="card-text">
+		The importance of the different sources and sinks of floating plastic are found using the inverse modelling process described above.
+    </p><p>
+    	The most important source of plastic in the Mediterranean is likely the densely populated coastal areas: these are estimated to contribute to 61% of the pollution. Rivers are estimated to contribute to 32% of the pollution, fishing activity to 6%.
+    </p><p>
+    	There is a roughly equal amount of plastic particles ending up on beaches and plastic particles sinking down. A map of where the plastic particles are expected to end up is shown on the left.
+    </p>
+    </div>
+  </div>
+  
+  <hr>
+
+	<div id="conclusions">
+
+  <h2 class="display-5" style="text-align: center; id="conclusions">Conclusions and outlook</h2>
+	
+    <p>
+      	By combining a model of floating particles with measurements of plastic concentrations, we tried to get a better overview of plastic pollution in the Mediterranean Sea. This kind of analysis can be used to answer questions like: <strong>what causes most plastic pollution</strong> and <strong>where is plastic pollution a problem</strong>.
+    </p><p>
+    	Future work will focus on making the model more realistic, by taking for example in account how plastic particles fragment into smaller pieces over time. More measurements can be included from beaches and sea sediment as well, and the approach can be extended globally. What happens to plastic particles once they start sinking down can be taken in account by using the entire 3D flow field instead of only the surface water.
+    </p><p>
+    	For more information, you can have a look at our <a href="https://iopscience.iop.org/article/10.1088/1748-9326/abe9ea" target="_blank">scientific paper in Environmental Research Letters</a>, or send us an email.
+    </p>
+    
+	<hr>
+	</div>
+
+  <h2 id="references" style="color:#9E9E9E">References</h2>
+  <div class="row">
+    <div class="col-lg-9" style="margin-bottom: 20px">
+    <p style="color:#9E9E9E">
+	[1] Charalambous 2015
+    </p>
+    </div>
+    </div>
+  </div>
+  
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">
+      <img class="img-fluid" style="width:200px" src="images/LOGO_ERC-FLAG_EU%20NEGATIF.png" alt=""><br>
+      Copyright &copy; TOPIOS project, 2017<br>
+      <small>Based on the <a href ="https://blackrockdigital.github.io/startbootstrap-modern-business/">Modern Business</a> theme, distributed by <a href="https://startbootstrap.com/template-overviews/modern-business/">Start Bootstrap</a> under an MIT license</small>
+    </p>
+  </div>
+  <!-- /.container -->
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
