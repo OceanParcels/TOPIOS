@@ -80,11 +80,11 @@
 	
 	<p>
 	Plastic fragments make up the majority of oceanic plastic pollution in terms of abundance. How plastics fragment, and how this can be modelled is not yet well understood, however.
-	In this work, we have taken a fragmentation model which has been used before to model how rocks fragment over time <a href="#references">[1]</a>. 
+	In this work, we take a fragmentation model which has been used to model how rocks fragment over time <a href="#references">[1]</a>. 
 	This fragmentation model breaks down objects in a cascading fashion: fragments split off from an initial object, and smaller fragments are split off from the newly created fragments repeatedly. 
 	We then calibrate the fragmentation model to data from experimental studies on plastic fragmentation.
 	</p>
-	The fragmentation model is coupled to a simple box model, in which plastic particles can travel between the beach, coastal water, and open ocean. 
+	The fragmentation model is coupled to a conceptual box model, in which plastic particles can travel between the beach, coastal water, and open ocean. 
 	Fragmentation is assumed to only happen on the beach, and size-dependent transport processes are added to the model, such as vertical mixing in the water column, beaching, and resuspension.
 	The box model is calibrated to represent <a href="mediterranean.html">plastic transport in the Mediterranean Sea</a>.  
 	</p>
@@ -95,7 +95,6 @@
     	<small>author: <a href="https://www.uu.nl/medewerkers/MLAKaandorp">Mikael Kaandorp</a>, date: April 2021</small>
     </p>
     <a href="#abstract_expanded" class="collapsed btn btn-primary" data-toggle="collapse" aria-expanded="true">Read the scientific abstract</a>
-	<a class="collapsed btn btn-primary" href="#results">Go to the results</a>
 	<a class="collapsed btn btn-primary" href="https://iopscience.iop.org/article/10.1088/1748-9326/abe9ea"  target="_blank">Go to the article in Environmental Research Letters</a>
 	
   <div id="abstract_expanded" class="collapse" role="tabpanel">
@@ -129,10 +128,19 @@
     </div>
     <div class="col align-self-center">
     <p class="card-text">
-	In the TOPIOS project, we try to get an overview of where all the plastics are in the marine environment. What are the sources of marine plastics, how are they transported, and where do they end up?
+	In the TOPIOS project, we try to get an overview of where all the plastics are in the marine environment. 
+	What are the sources of marine plastics, how are they transported, and where do they end up?
     </p>
     <p>
-	Majority of pollution in terms of abundance, no real models exist, so hard to quantify its effect on the mass budget
+	Previously, we have estimated the most important <a href="mediterranean.html">sources and sinks of marine plastics in the Mediterranean Sea.</a> 
+	In that study, we neglected the effect of fragmentation, based on the fact that the time scale of this process as an environmental sink of plastics 
+	is likely much longer than other sinks such as beaching and sinking of plastics <a href="#references">[2]</a>.
+	</p>
+	<p>	
+	However, we know that fragmentation plays an important role as a source of secondary microplastics <a href="#references">[3]</a>. 
+	For example, in the lower figure we see plastic fragments collected in the surface water of the North Atlantic Gyre. Most of the plastic particles are clearly fragments from bigger objects.
+	We see that fragments dominate plastic pollution in terms of abundance. Models for plastic fragmentation are lacking, however, and its effect on the plastic mass budget is relatively unknown.
+	The goal of this research is to fill these missing gaps of knowledge.  
     </p>
     </div>
   </div>
@@ -148,7 +156,20 @@
     </div>
     <div class="col align-self-center">
       <p class="card-text">
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		Plastic pollution is dominated by fragments when looking at the total number of particles. Most of the fragments which are found in the surface water of the 
+		ocean are only a couple of millmeters in size.
+	</p>
+	<p>
+		We can quantify the sizes of the plastic particles that we find using a Particle Size Distribution (PSD). One example is plotted in the lower
+		figure, using observational data from the surface water by <a href="#references">Cozar et al. (2015) [4]</a>. The length of the particles is plotted on the x-axis,
+		the amount of particles at this given length is plotted on the y-axis. Note the log-log scale here.
+	</p>
+	<p>
+		What has been observed, is that a large part of the Particle Size Distribution follows a power law, leading to a straight line 
+		on a log-log scale. Power laws are very interesting mathematical relations which have been found in many fields of study, 
+		ranging from city population sizes to the number of citations per scientific paper <a href="#references">[5]</a>.
+		Power laws are often observed in scale invariant processes, which means that a process acts similarly on all kinds of (spatial) scales.
+		One can think of fractals, where however far one zooms in into an image, the same structure is observed. 
 	</p>
     </div>
   </div>
@@ -157,19 +178,36 @@
 
   <h2 id="fragmentation">A fragmentation model from outer space</h2>
   <div class="row">
-    <div class="col-lg-7" style="margin-bottom: 20px">
+    <div class="col-lg-6" style="margin-bottom: 20px">
       <img src="images/fragmentation/Cubes.png" style="text-align: center" width=80% alt="">
     	<iframe style="position: relative; height: 400px; width: 100%;"
-		src="https://www.youtube.com/embed/fqn7rDfHqU0?version=3&loop=1&playlist=fqn7rDfHqU0">
+		src="https://www.youtube.com/embed/5uRT0A2N__A?version=3&loop=1&playlist=5uRT0A2N__A">
 		</iframe> 
     </div>
     <div class="col align-self-center">
     <p class="card-text">
-		The virtual plastic particles are released at different locations, where we expect a lot of plastic input, see the figure on the left. 
+		Scale invariant behavior has been observed in the fragmentation of rocks, leading to power laws when looking for example at grain sizes in soils <a href="#references">[7]</a>. 
+    	In our work, we have taken an existing fragmentation model from soil science, and adapted it to our problem of plastic pollution.
     </p><p>
-    	The different <strong>sources</strong> taken in account are: river mouths (green circles) <a href="#references">[3]</a>, fishing activity (blue shading) <a href="#references">[4]</a>, and densely populated coastal areas (red shading) <a href="#references">[5][6]</a>. 
+		The fragmentation model that we use is the one by <a href="#references">Charalambous (2015) [1]</a>. This model has been used to simulate
+		the size distributions of rocks on Mars <a href="#references">[8]</a>. 
     </p><p>
-    	It is currently not well known how much each source contributes to the total amount of plastic pollution. We therefore set the importance of the sources as a <strong>parameter</strong> in the model.
+		The basis of this model is quite straightforward, and builds further on the model by <a href="#references">Turcotte (1986) [9]</a>. 
+		We start with a big cube, with length <i>L</i>. Fragments will split off from this cube, with a length <i>L/2</i>. Fragments will split off from these fragments, with a length <i>L/4</i>.
+		Each fragment is further split into smaller fragments repeatedly, and each time the length decreases by a factor of 2. This process repeats itself until infinity.		
+    </p>
+	<p>
+		The probability that a fragment splits off from a bigger object is determined by a fragmentation probability <i>p</i>, which is a parameter that can be set in the model.
+		In the upper figure, we have plotted an example for <i>p = 1/2</i>.
+    </p>
+	<p>
+		This cascade of fragmentation can be repeated again and again, each time creating more and more small fragments.
+		In <a href="#references">Charalambous (2015) [1]</a> this fragmentation process was formulated as a continuous process in time.
+		We use this model to simulate the continuously breaking down of plastics in the marine environment. 
+    </p>
+	<p>
+		In the animation, we simulate what would happen with the Particle Size Distribution if we break down a single object over time. The original object is broken down into more and more fragments as time progresses.
+		At some point in time, a power law is reached in the Particle Size Distribution. If we continue the fragmentation process, eventually there is almost nothing left of the original object.
     </p>
     </div>
   </div>
@@ -178,17 +216,30 @@
 
   <h2 id="environment">Environmental transport</h2>
   <div class="row">
-    <div class="col-lg-7" style="margin-bottom: 20px">
+    <div class="col-lg-6" style="margin-bottom: 20px">
 		<img src="images/fragmentation/Box_model.png" style="text-align: center" width=100% alt="">
     </div>
     <div class="col align-self-center">
     <p class="card-text">
-		Environmental <strong>sinks</strong> of plastic are added to the model. We consider plastic particles <strong>sinking down</strong> (due to e.g. biofouling <a href="#references">[7]</a>), and plastic particles <strong>ending up on beaches</strong> as the most important sinks.
-    </p><p>
-    	It is currently not well known what is the most important environmental sink. We therefore <strong>parametrize</strong> the sinks to be able to test different scenarios. 
-    </p><p>
-    	With the parametrization for the sinks, we can now calculate the probability that a plastic particle is still afloat. This is displayed in the animation on the left: particles light up in red when they disappear due to beaching. By combining the sinks with the source parametrization, we can calculate the amount of floating plastic particles at a given <strong>location</strong> at a given <strong>time</strong>. 
+		We now have a model which captures how plastics could be broken down over time. This is one part of the puzzle to explain the shape of Particle Size Distributions measured in the environment.
     </p>
+    <p>
+    	The other part of the puzzle is environmental transport. Each particle size undergoes different kinds of transport in the environment. Think for example of vertical mixing. 
+    	Small particles are less buoyant. This means they tend to be more mixed in the water column <a href="#references">[10]</a>. This has multiple implications:
+    	if one measures particles at the water surface, small particles are likely undersampled. Furthermore, differently sized particles likely experience different influences by surface waves (i.e. Stokes drift),
+    	which have a limited depth of influence. 
+    </p>
+    <p>
+    	We capture environmental transport using a conceptual box model. Plastic particles can move between the open ocean, coastal water, and beach. 
+    	Transport is defined by transition probabilities, shown by the arrows in the figure. Particle can more between the different cells in the model.
+    	Particles can also be removed from the environment by sinks (e.g. by sinking down induced by biofouling <a href="#references">[11]</a>)
+    </p>
+    <p>
+		We calibrate the box model using estimated plastic transport in the <a href="mediterranean.html">Mediterranean Sea.</a> 
+		We have estimates of the total plastic input <a href="#references">[2]</a> and how much is afloat <a href="#references">[4]</a>, 
+		from which we estimate the probabilities that plastics are removed from the environment. Lagrangian particle simulations are used to estimate 
+		transport between the different cells <a href="#references">[2]</a>. We assume fragmentation is dominant on the beach, 
+		where plastics are subjected to UV radiation, oxidation, and mechanical abrasion <a href="#references">[12]</a>.
     </div>
   </div>
   
@@ -202,11 +253,18 @@
     </div>
     <div class="col align-self-center">
     <p class="card-text">
-		Now that we have a model with possible sources and sinks of floating plastic particles, it is time to start comparing our model with in situ measurements of plastic concentrations.
+		We calibrate the fragmentation model to experimental weathering data of plastic particles by <a href="#references">Song et al. (2017) [12]</a>.
+		From the experimental weathering data, we used results for polyethylene and polypropylene, which are the most commonly found polymers in the surface waters <a href="#references">[13]</a>.
     </p><p>
-    	About a thousand measurements of plastic concentrations were gathered from literature. By using a neuston net, researchers have measured the plastic concentration at different locations and times in the Mediterranean: see the animation on the left.
+		In the upper figure, we see the fragmentation model calibrated to different amounts of UV weathering time. Two parameters were calibrated in the fragmentation model:
+		the fragmentation probability <i>p</i> mentioned previously, and a fragmentation index <i>f</i> relating time in the fragmentation model to environmental exposure time.
+    	The model does quite a good job in fitting the experimental data: most results are within the errorbars resulting from measurement uncertainty. 
+    </p>
     </p><p>
-    	We will try to find out what the parameters for the sources and sinks should be, such that our model matches these observations as well as possible. This is what we call <strong>inverse modelling</strong>. In this process we try out a lot of parameter combinations, to see what the most likely values are.
+		We coupled the fragmentation model to the environmental box model from the previous section. A resulting Particle Size Distribution is presented in the lower figure.
+		The solid blue line represents the model results. The dashed blue line represents the model results when we include vertical mixing of particles in the water column.
+		Smaller particles are less bouyant and therefore mixed deeper into the water column. Nets used to measure plastics in the surface water have a limited submerged net depth, 
+		resulting in underestimating the small particle sizes. This corresponds well to the example measurements from the Mediterranean Sea presented using the orange line <a href="#references">[14]</a>. 
     </p>
     </div>
   </div>
@@ -216,16 +274,31 @@
   <h2 id="sensitivity">Sensitivity study: environmental (size-dependent) transport and fragmentation</h2>
   <div class="row">
     <div class="col-lg-5" style="margin-bottom: 20px">
-		<img src="images/fragmentation/Sensitivity.png" style="text-align: center" width=100% alt="">
+		<img src="images/fragmentation/Sensitivity.png" style="text-align: center" width=80% alt="">
     </div>
     <div class="col align-self-center">
     <p class="card-text">
-		The importance of the different sources and sinks of floating plastic are found using the inverse modelling process described above.
+		The fragmentation model coupled to the environmental box model allows us to quickly test hypotheses regarding plastic fragmentation and transport in the environment.
+    	We show one example in the figure on the left, where we included the effect of size-dependent resuspension (particles moving from the dry beach into the water).
     </p><p>
-    	The most important source of plastic in the Mediterranean is likely the densely populated coastal areas: these are estimated to contribute to 61% of the pollution. Rivers are estimated to contribute to 32% of the pollution, fishing activity to 6%.
-    </p><p>
-    	There is a roughly equal amount of plastic particles ending up on beaches and plastic particles sinking down. A map of where the plastic particles are expected to end up is shown on the left.
+		In <a href="#references">Hinata et al. (2017) [15]</a>, it was observed that larger particles tend to have longer residence time on beaches, 
+		as these are more likely to be carried further onshore by waves compared to smaller particles. 
+		We tested the effect of this size-dependent resuspension hypothesis on Particle Size Distributions in the environment
     </p>
+	<p>
+		We see that this size-dependent resuspension (orange lines) would greatly increase the effect of fragmentation compared to a scenario without this effect (blue lines).
+		With size-dependent resuspension, larger particles would reside longer on beaches and therefore undergo more fragmentation. 
+		This increases the amount of smaller plastic fragments in the environment, and increases the slope of the Particle Size Distributions.
+    </p>
+	<p>
+		We tested multiple scenario's in our <a href="https://iopscience.iop.org/article/10.1088/1748-9326/abe9ea" target="_blank">paper</a>, such as size-dependent vertical mixing, influence by Stokes drift, and different fragmentation scenario's based on different polymers. 
+    </p>    
+	<p>
+		For a realistic scenario, the model finds that in the Mediterranean 98% of plastics reside on beaches, 2% in coastal surface waters, and 0.2% in the surface open ocean.
+		Fragmentation plays an important role as a source of secondary microplastics. It seems to play a minor role in the plastic mass budget, however.
+		As a rough estimate, we think that less than 0.0001% of macroplastic mass breaks down into microplastics per week, and less than 0.0001% of microplastic mass breaks down into plastics smaller than 0.1mm per week.
+		These numbers are much lower than other sinks (such as beaching and sinking down of plastics), which we estimate take up about 0.05% of plastic mass per week. 
+    </p> 
     </div>
   </div>
   
@@ -236,13 +309,15 @@
   <h2 class="display-5" style="text-align: center; id="conclusions">Conclusions and outlook</h2>
 	
     <p>
-      	By combining a model of floating particles with measurements of plastic concentrations, we tried to get a better overview of plastic pollution in the Mediterranean Sea. This kind of analysis can be used to answer questions like: <strong>what causes most plastic pollution</strong> and <strong>where is plastic pollution a problem</strong>.
-    </p><p>
-    	Future work will focus on making the model more realistic, by taking for example in account how plastic particles fragment into smaller pieces over time. More measurements can be included from beaches and sea sediment as well, and the approach can be extended globally. What happens to plastic particles once they start sinking down can be taken in account by using the entire 3D flow field instead of only the surface water.
-    </p><p>
-    	For more information, you can have a look at our <a href="https://iopscience.iop.org/article/10.1088/1748-9326/abe9ea" target="_blank">scientific paper in Environmental Research Letters</a>, or send us an email.
+		We implemented a model for plastic fragmentation by looking at fragmentation models used for rock fragmentation.
+		The fragmentation model was couples to an environmental box model, to capture the effect of size-dependent transport of plastic particles in the marine environment.
+		This coupled model was used to simulate Particle Size Distributions of plastics in water and on beaches. 
     </p>
-    
+    <p>
+		We find that fragmentation plays an important role as a source of secondary microplastics, but that it seems to play a minor role as a sink of plastic mass.
+		The combined fragmentation model and environmental box model is an efficient tool to quickly test out different hypotheses regarding fragmentation, sources, and sinks of plastics.
+		In the future, we hope to couple the fragmentation model to more complex physical models, capturing spatial and temporal variability of plastic transport using for example Lagrangian particle simulations.
+    </p>    
 	<hr>
 	</div>
 
@@ -251,6 +326,48 @@
     <div class="col-lg-9" style="margin-bottom: 20px">
     <p style="color:#9E9E9E">
 	[1] Charalambous 2015
+    </p>	
+    <p style="color:#9E9E9E">
+	[2] Kaandorp 2020
+    </p>
+    <p style="color:#9E9E9E">
+	[3] Secondary microplastics?
+    </p>
+    <p style="color:#9E9E9E">
+	[4] Cozar
+    </p>
+    <p style="color:#9E9E9E">
+	[5] Power laws
+    </p>
+   <p style="color:#9E9E9E">
+	[7] power laws in soils?
+    </p>
+   <p style="color:#9E9E9E">
+	[8] Mars soils
+    </p>
+   <p style="color:#9E9E9E">
+	[9] Turcotte
+    </p>
+   <p style="color:#9E9E9E">
+	[10] Poulain
+    </p>
+   <p style="color:#9E9E9E">
+	[11] Lobelle?
+    </p>
+   <p style="color:#9E9E9E">
+	[11.5] Dominant on beaches
+    </p>
+   <p style="color:#9E9E9E">
+	[12] Song 2017
+    </p>
+   <p style="color:#9E9E9E">
+	[13] Bond
+    </p>
+   <p style="color:#9E9E9E">
+	[14] Ruiz-Orejon
+    </p>
+   <p style="color:#9E9E9E">
+	[15] Hinata
     </p>
     </div>
     </div>
